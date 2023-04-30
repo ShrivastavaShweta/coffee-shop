@@ -8,14 +8,17 @@ import java.util.Objects;
 @MappedSuperclass
 public abstract class AbstractEntity {
 
+    //Fields
     @Id
     @GeneratedValue
     private int id;
 
+    //Getters and Setters
     public int getId() {
         return id;
     }
 
+    //Equals
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
