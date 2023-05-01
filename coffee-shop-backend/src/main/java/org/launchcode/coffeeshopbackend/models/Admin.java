@@ -7,4 +7,5 @@ public class Admin extends User {
 
     //Constructors
     public Admin() {}
+
 }

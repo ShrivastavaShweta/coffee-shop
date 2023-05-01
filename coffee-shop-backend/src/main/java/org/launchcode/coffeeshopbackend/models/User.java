@@ -57,6 +57,10 @@ public class User extends AbstractEntity {
     }
 
     //Instance Methods
+    public boolean isAdmin() {
+        if (this.getClass() == Admin.class) {return true;}
+        else {return false;}
+    }
     public boolean isMatchingPassword(String password) {
         return encoder.matches(password, pwHash);
     }
