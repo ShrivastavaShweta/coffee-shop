@@ -12,8 +12,9 @@ public class User extends AbstractEntity {
 
     //Fields
     @NotNull
-    private String username;
+    private String name;
     private Calendar birthday;
+    @NotNull
     private String email;
     private ArrayList<Drink> savedDrinks = new ArrayList<>();
     private Drink faveDrink;
@@ -23,8 +24,8 @@ public class User extends AbstractEntity {
 
     //Constructors
     public User() {}
-    public User(String username, String password, String email, Calendar birthday) {
-        this.username = username;
+    public User(String name, String password, String email, Calendar birthday) {
+        this.name = name;
         this.pwHash = encoder.encode(password);
         this.email = email;
         this.birthday = birthday;
@@ -35,8 +36,8 @@ public class User extends AbstractEntity {
         return email;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
     public Calendar getBirthday() {
