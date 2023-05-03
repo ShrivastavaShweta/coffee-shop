@@ -2,12 +2,14 @@ package org.launchcode.coffeeshopbackend.models;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.Calendar;
 
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="admin_status", discriminatorType = DiscriminatorType.INTEGER)
 public class User extends AbstractEntity {
 
     //Fields
@@ -16,8 +18,11 @@ public class User extends AbstractEntity {
     private Calendar birthday;
     @NotNull
     private String email;
-    private ArrayList<Drink> savedDrinks = new ArrayList<>();
-    private Drink faveDrink;
+//    @OneToMany
+//    @JoinColumn(name = "user_id")
+//    private ArrayList<Drink> savedDrinks = new ArrayList<>();
+//
+//    private Drink faveDrink;
    @NotNull
     private String pwHash;
     private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -48,13 +53,13 @@ public class User extends AbstractEntity {
         this.birthday = birthday;
     }
 
-    public Drink getFaveDrink() {
-        return faveDrink;
-    }
+//    public Drink getFaveDrink() {
+//        return faveDrink;
+//    }
 
-    public void setFaveDrink(Drink faveDrink) {
-        this.faveDrink = faveDrink;
-    }
+//    public void setFaveDrink(Drink faveDrink) {
+//        this.faveDrink = faveDrink;
+//    }
 
     //Instance Methods
     public boolean isAdmin() {
@@ -65,11 +70,11 @@ public class User extends AbstractEntity {
         return encoder.matches(password, pwHash);
     }
 
-    public void addSavedDrink(Drink drink) {
-        savedDrinks.add(drink);
-    }
+//    public void addSavedDrink(Drink drink) {
+//        savedDrinks.add(drink);
+//    }
 
-    public void deleteSavedDrink(Drink drink) {
-        savedDrinks.remove(drink);
-    }
+//    public void deleteSavedDrink(Drink drink) {
+//        savedDrinks.remove(drink);
+//    }
 }
