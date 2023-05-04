@@ -17,7 +17,7 @@ public class User extends AbstractEntity {
     @NotNull
     private String email;
     private ArrayList<Drink> savedDrinks = new ArrayList<>();
-    private Drink faveDrink;
+    //private Drink faveDrink;
    @NotNull
     private String pwHash;
     private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -48,19 +48,19 @@ public class User extends AbstractEntity {
         this.birthday = birthday;
     }
 
-    public Drink getFaveDrink() {
-        return faveDrink;
-    }
+//    public Drink getFaveDrink() {
+//        return faveDrink;
+//    }
 
-    public void setFaveDrink(Drink faveDrink) {
-        this.faveDrink = faveDrink;
-    }
+//    public void setFaveDrink(Drink faveDrink) {
+//        this.faveDrink = faveDrink;
+//    }
 
     //Instance Methods
-    public boolean isAdmin() {
-        if (this.getClass() == Admin.class) {return true;}
-        else {return false;}
-    }
+//    public boolean isAdmin() {
+//        if (this.getClass() == Admin.class) {return true;}
+//        else {return false;}
+//    }
     public boolean isMatchingPassword(String password) {
         return encoder.matches(password, pwHash);
     }
