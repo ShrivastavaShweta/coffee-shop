@@ -10,7 +10,7 @@ import { UserLoginPageComponent } from './user-login-page/user-login-page.compon
 
 
 const routes:Routes=[
-  { path:'register', component:RegisterUserPageComponent},
+  { path:'register-user', component:RegisterUserPageComponent},
   { path:'user-login', component:UserLoginPageComponent }
 ]
 @NgModule({
