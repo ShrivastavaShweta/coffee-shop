@@ -66,13 +66,11 @@
   font-weight: bold;
   color:teal;
 }
-
 .flavortext1 {
   text-align: center;
   display: block;
   margin-top: 10px;
 }
-
 .flavor-1 img,
 .flavor-2 img,
 .flavor-3 img,
@@ -85,16 +83,11 @@
   width: 100%;
   display: block;
   margin: 0 auto;
-
 }
-
-
 img {
   width: 150px; 
   height: auto; 
 }
-
-
 .container {
   height: 100vh;
 }
