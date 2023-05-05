@@ -10,7 +10,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 
 const routes: Routes = [
   { path: 'admin-login', component: AdminLoginComponent },
-  { path: 'home-page', component:HomePageComponent}
+  { path: 'home-page', component:HomePageComponent},
   { path:'register-user', component:RegisterUserPageComponent},
   { path:'user-login', component:UserLoginPageComponent }
 ]

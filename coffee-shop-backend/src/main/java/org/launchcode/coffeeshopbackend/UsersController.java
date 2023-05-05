@@ -28,8 +28,8 @@ public class UsersController {
     @PostMapping("register-user")
     public void addUser(@RequestBody User user) {
         if (userRepository.count() == 0) {
-            adminRepository.save((Admin) user);
-        }
+            adminRepository.save(user.castToAdmin());
+        } else
         userRepository.save(user);
     }
 
