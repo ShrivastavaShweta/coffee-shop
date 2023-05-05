@@ -1,9 +1,13 @@
 .helloname {
   position: absolute;
   top:3%;
-  right: 120px;
+  right: 135px;
   margin-right: 10px; 
   transform: translateY(-50%);
+  font-weight: bold;
+  color:teal;
+  font-size: 28px;
+
 }
 .logout {
   position: absolute;
@@ -11,6 +15,10 @@
   right: 40px;
   margin-right: 10px; 
   transform: translateY(-50%);
+  font-weight: bold;
+  color:teal;
+  font-size: 20px;
+
 }
 .DreamyLogo {
   margin: 25px;
@@ -55,6 +63,8 @@
   padding: -10px;
   text-align: center;
   font-size: 28px;
+  font-weight: bold;
+  color:teal;
 }
 
 .flavortext1 {
@@ -75,7 +85,7 @@
   width: 100%;
   display: block;
   margin: 0 auto;
- 
+
 }
 
 
@@ -103,13 +113,13 @@ img {
   left: 10%;
   top: 50%;
   transform: translateY(-35%);
-  font-size: 24px;
   font-weight: bold;
- 
+  color:teal;
+  text-align: center;
 }
 
 .box1 p {
-  font-size: 28px;
+  font-size: 40px;
   line-height: 1.5;
   margin: 0;
 }
@@ -125,6 +135,7 @@ img {
   transform: translateY(-35%);
   font-size: 24px;
   font-weight: bold;
+  color:teal;
  
 }
  
