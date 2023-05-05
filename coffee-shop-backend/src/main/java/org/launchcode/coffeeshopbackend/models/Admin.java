@@ -1,7 +1,11 @@
 package org.launchcode.coffeeshopbackend.models;
 
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+
+
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,6 +23,8 @@ public class Admin {
 
     @NotNull
     private String pwHash;
+
+    @DiscriminatorValue("1")
 
     private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
     //Constructors

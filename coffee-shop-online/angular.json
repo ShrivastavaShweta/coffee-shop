@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "coffee-shop-online"
+  "defaultProject": "coffee-shop-online",
+  "cli": {
+    "analytics": false
+  }
 }
