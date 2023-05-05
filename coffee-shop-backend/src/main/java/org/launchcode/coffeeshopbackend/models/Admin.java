@@ -1,19 +1,50 @@
 package org.launchcode.coffeeshopbackend.models;
 
-<<<<<<< HEAD
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+
+
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+
 
 @Entity
-@DiscriminatorValue("1")
-=======
-import javax.persistence.Entity;
+public class Admin {
 
-@Entity
->>>>>>> 377a39c09f143033297dd0d4b6c26d5b450e5b18
-public class Admin extends User {
+    @Id
+    @NotNull
+    @Email
+    private String userId;
 
+    @NotNull
+    private String pwHash;
+
+    @DiscriminatorValue("1")
+
+    private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
     //Constructors
     public Admin() {}
+
+    public Admin(String userId, String password) {
+        this.userId = userId;
+        this.pwHash = encoder.encode(password);
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getPwHash() {
+        return pwHash;
+    }
 
 }

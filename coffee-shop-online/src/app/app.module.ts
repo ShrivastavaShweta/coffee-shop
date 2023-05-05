@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { RouterModule, Routes } from '@angular/router';
+
 import { AppComponent } from './app.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { UserLoginPageComponent } from './user-login-page/user-login-page.component';
 import { RegisterUserPageComponent } from './register-user-page/register-user-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
+
 
 const routes: Routes = [
   { path: 'admin-login', component: AdminLoginComponent },
@@ -24,7 +28,9 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

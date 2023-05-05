@@ -18,6 +18,10 @@ public class User extends AbstractEntity {
     private Calendar birthday;
     @NotNull
     private String email;
+
+    //private ArrayList<Drink> savedDrinks = new ArrayList<>();
+    //private Drink faveDrink;
+
 //    @OneToMany
 //    @JoinColumn(name = "user_id")
 //    private ArrayList<Drink> savedDrinks = new ArrayList<>();
@@ -62,10 +66,10 @@ public class User extends AbstractEntity {
 //    }
 
     //Instance Methods
-    public boolean isAdmin() {
-        if (this.getClass() == Admin.class) {return true;}
-        else {return false;}
-    }
+//    public boolean isAdmin() {
+//        if (this.getClass() == Admin.class) {return true;}
+//        else {return false;}
+//    }
     public boolean isMatchingPassword(String password) {
         return encoder.matches(password, pwHash);
     }
