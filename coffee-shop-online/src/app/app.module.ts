@@ -1,3 +1,5 @@
+;
+import { HomePageComponent } from './home-page/home-page.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,9 +9,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserLoginPageComponent } from './user-login-page/user-login-page.component';
 import { RegisterUserPageComponent } from './register-user-page/register-user-page.component';
 
+
 const routes: Routes = [
   { path: 'admin-login', component: AdminLoginComponent },
-  
+  { path: 'home-page', component: HomePageComponent},
 ];
 
 
@@ -18,7 +21,8 @@ const routes: Routes = [
     AppComponent,
     AdminLoginComponent,
     UserLoginPageComponent,
-    RegisterUserPageComponent
+    RegisterUserPageComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
