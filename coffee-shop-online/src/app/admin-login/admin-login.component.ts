@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Admin } from '../admin';
+import { LoginAdminService } from '../login-admin.service';
 
 @Component({
   selector: 'app-admin-login',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminLoginComponent implements OnInit {
 
-  constructor() { }
+  admin: Admin = new Admin();
+  constructor(private loginAdminService: LoginAdminService) { }
 
   ngOnInit(): void {
   }
 
+  adminLogin(){
+    //console.log(this.admin);
+    this.loginAdminService.loginAdmin(this.admin).subscribe(data =>{
+      alert("Login successful");
+    }, errror => alert("Please enter correct user Id and password"));
+  }
 }

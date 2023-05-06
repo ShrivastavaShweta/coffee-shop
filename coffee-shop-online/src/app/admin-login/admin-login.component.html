@@ -1,13 +1,15 @@
 <body>
     <h1>Admin Login Page</h1>
 
-    <form action="/admin" method="post">
+    
+    <form (ngSubmit)="adminLogin()">
+
         <label>
-            Email <input type="text" name="Email" placeholder="abc@abc.com">
+            Email <input type="text" name="userId" id="userId" placeholder="abc@abc.com" [(ngModel)]="admin.userId">
         </label><br><br>
 
         <label>
-            Password <input type="text" name="Email">
+            Password <input type="text" name="password" id="password"[(ngModel)]="admin.password">
         </label>
 
         <button (click)='true'>Login as Admin</button>
