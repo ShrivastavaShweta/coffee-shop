@@ -6,21 +6,21 @@
 
     <div class = "register-box" id="box">
 
-        <form>
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm">
 
           <h3> Sign Up Now </h3>
 
             <label for="fullName"></label><br>
-            <input type="text" id="fullName" placeholder="Enter Your Name"><br>
+            <input type="text" [(ngModel)]="user.name" id="fullName" placeholder="Enter Your Name"><br>
 
             <label for="email"></label><br>
-            <input type="text" id="email" placeholder="Enter Your Email"><br>
+            <input type="text" [(ngModel)]="user.email" id="email" placeholder="Enter Your Email"><br>
 
             <label for="typePassword"></label><br>
-            <input type="text" id="typePassword" placeholder="Enter Your Password"><br>
+            <input type="text" [(ngModel)]="user.password" id="typePassword" placeholder="Enter Your Password"><br>
 
             <label for="confirmPassword"></label><br>
-            <input type="text" id="confirmPassword" placeholder="Confirm Password"><br>
+            <input type="text" [(ngModel)}="user.confirmPw" id="confirmPassword" placeholder="Confirm Password"><br>
 
           <button type="submit" id="btnStyle"> Create Account </button>
 

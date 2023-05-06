@@ -3,5 +3,5 @@ export class User {
   name?: string;
   birthday?: string;
   email?: string;
-  pwHash?: string;
+  password?: string;
 }

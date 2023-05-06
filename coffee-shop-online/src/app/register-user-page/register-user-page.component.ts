@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './register-user-page.component.html',
   styleUrls: ['./register-user-page.component.css']
 })
-export class RegisterUserPageComponent implements OnInit {
+export class RegisterUserPageComponent {
 
   user: User;
 
@@ -20,8 +20,8 @@ export class RegisterUserPageComponent implements OnInit {
       this.user = new User();
     }
 
-  ngOnInit(): void {
+  onSubmit() {
+    this.userService.save(this.user);
   }
-
 
 }

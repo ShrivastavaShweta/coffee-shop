@@ -19,7 +19,7 @@ public class AdminController {
 
     @PostMapping("/admin-login")
     public ResponseEntity<?> loginAdmin(@RequestBody Admin adminData){
-        Admin admin = adminRepository.findByUserId(adminData.getUserId());
+        Admin admin = adminRepository.findByEmail(adminData.getEmail());
         if (admin.getPwHash().equals(adminData.getPwHash())){
             return ResponseEntity.ok(admin);
         }

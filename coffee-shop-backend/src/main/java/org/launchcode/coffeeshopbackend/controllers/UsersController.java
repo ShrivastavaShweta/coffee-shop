@@ -1,4 +1,4 @@
-package org.launchcode.coffeeshopbackend;
+package org.launchcode.coffeeshopbackend.controllers;
 
 import org.launchcode.coffeeshopbackend.models.Admin;
 import org.launchcode.coffeeshopbackend.models.User;
@@ -27,7 +27,7 @@ public class UsersController {
 
     @PostMapping("register-user")
     public void addUser(@RequestBody User user) {
-        if (userRepository.count() == 0) {
+        if (adminRepository.count() == 0) {
             adminRepository.save(user.castToAdmin());
         } else
         userRepository.save(user);
