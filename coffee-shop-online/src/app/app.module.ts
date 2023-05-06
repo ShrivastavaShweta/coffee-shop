@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-
 import { AppComponent } from './app.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -14,7 +12,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 
 const routes: Routes = [
   { path: 'admin-login', component: AdminLoginComponent },
-  { path: 'home-page', component:HomePageComponent}
+  { path: 'home-page', component:HomePageComponent},
   { path:'register-user', component:RegisterUserPageComponent},
   { path:'user-login', component:UserLoginPageComponent }
 ]

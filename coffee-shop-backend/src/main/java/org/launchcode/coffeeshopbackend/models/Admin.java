@@ -1,9 +1,6 @@
 package org.launchcode.coffeeshopbackend.models;
 
-
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
-
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;

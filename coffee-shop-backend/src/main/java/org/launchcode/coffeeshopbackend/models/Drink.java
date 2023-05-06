@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class Drink extends AbstractEntity {
+public class Drink extends AbstractMerchandise {
 
     // TODO: Add members
 

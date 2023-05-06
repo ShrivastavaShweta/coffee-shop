@@ -1,10 +1,8 @@
 package org.launchcode.coffeeshopbackend.models;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.launchcode.coffeeshopbackend.models.AbstractUser;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
+import javax.persistence.Entity;
 import java.util.Calendar;
 
 @Entity
@@ -81,4 +79,16 @@ public class User extends AbstractEntity {
 //    public void deleteSavedDrink(Drink drink) {
 //        savedDrinks.remove(drink);
 //    }
+
+public class User extends AbstractUser {
+
+    public Admin castToAdmin() {
+        Admin admin = new Admin();
+        admin.setName(this.getName());
+        admin.setPwHash(this.getPwHash());
+        admin.setEmail(this.getEmail());
+        admin.setBirthday(this.getBirthday());
+        return admin;
+    }
+
 }
