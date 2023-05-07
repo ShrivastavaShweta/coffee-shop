@@ -10,6 +10,6 @@ export class AppComponent {
   title: string;
 
   constructor() {
-    this.title = 'Coffee Shop Online'
+    this.title = 'Coffee Shop Online';
   }
 }

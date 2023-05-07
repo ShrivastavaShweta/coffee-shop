@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
+import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -10,6 +10,7 @@ import { UserLoginPageComponent } from './user-login-page/user-login-page.compon
 import { RegisterUserPageComponent } from './register-user-page/register-user-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { UserService } from './service/user-service.service';
+import { LoginAdminService } from './login-admin.service';
 
 @NgModule({
   declarations: [
@@ -21,11 +22,16 @@ import { UserService } from './service/user-service.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    RouterModule.forRoot([
+      { path: 'admin-login', component: AdminLoginComponent },
+      { path: '', component: HomePageComponent },
+      { path:'register-user', component: RegisterUserPageComponent },
+      { path:'user-login', component: UserLoginPageComponent }
+    ]),
+    HttpClientModule,
     FormsModule,
-    HttpClientModule
   ],
-  providers: [UserService],
+  providers: [UserService, LoginAdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

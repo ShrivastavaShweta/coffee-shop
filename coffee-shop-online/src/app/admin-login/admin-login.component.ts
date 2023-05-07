@@ -19,6 +19,6 @@ export class AdminLoginComponent implements OnInit {
     //console.log(this.admin);
     this.loginAdminService.loginAdmin(this.admin).subscribe(data =>{
       alert("Login successful");
-    }, errror => alert("Please enter correct user Id and password"));
+    }, error => alert("Please enter correct user Id and password"));
   }
 }
