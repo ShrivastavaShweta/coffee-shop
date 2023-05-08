@@ -43,13 +43,8 @@
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
   grid-gap: 60px;
   width: 50%;
-
-  grid-gap: 180px;
-  width: 75%;
-
   margin: 0 auto;
   align-items: center;
   padding: 11.5%;
@@ -71,6 +66,11 @@
   font-weight: bold;
   color:teal;
 }
+.flavortext1 {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+}
 .flavor-1 img,
 .flavor-2 img,
 .flavor-3 img,
@@ -80,7 +80,7 @@
 .flavor-7 img,
 .flavor-8 img,
 .flavor-9 img {
-  width: 100%;
+  width: 110%;
 }
 .box1 {
   border: 2px solid black;
@@ -103,7 +103,7 @@
   margin: 0;
 }
 .box2 {
-  border: 2px solid black;
+  border: 2px solid #000000;
   padding: 20px;
   width: 200px;
   height: 720px;
@@ -122,20 +122,11 @@
 .box2 img {
   width:120px;
   height: 120px;
-
   margin: 10px 20px -5px -30px;
-
-  margin: 15px 15px 15px -15px;
-
 }
 p {
   font-size: 28px;
   line-height: 1.5;
-
-  /* margin: 0; */
-
-  margin: 0;
-
   text-align: center;
 }
 .background {
