@@ -1,0 +1,165 @@
+.helloname {
+  position: absolute;
+  top:3%;
+  right: 135px;
+  margin-right: 10px; 
+  transform: translateY(-50%);
+  font-weight: bold;
+  color:teal;
+  font-size: 28px;
+
+}
+.logout {
+  position: absolute;
+  top:3%;
+  right: 40px;
+  margin-right: 10px; 
+  transform: translateY(-50%);
+  font-weight: bold;
+  color:teal;
+  font-size: 20px;
+
+}
+.DreamyLogo {
+  margin: 25px;
+  width: 500px;
+  height: 0px;
+  outline: transparent 1px rgb(22, 22, 22);
+  outline: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 1%;
+  left: 49%;
+  align-items: center;
+}
+
+.DreamyLogo img {
+  width: 33%;
+  display: block;
+  margin: 0 auto; 
+  border-radius: 50%; 
+  overflow: hidden;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  width: 33%;
+  margin: 0 auto;
+  align-items: center;
+  padding: 11.5%;
+}
+
+.flavor-1,
+.flavor-2,
+.flavor-3,
+.flavor-4,
+.flavor-5,
+.flavor-6,
+.flavor-7,
+.flavor-8,
+.flavor-9 {
+  border: 2px solid black;
+  padding: -10px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color:teal;
+}
+.flavortext1 {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+}
+.flavor-1 img,
+.flavor-2 img,
+.flavor-3 img,
+.flavor-4 img,
+.flavor-5 img,
+.flavor-6 img,
+.flavor-7 img,
+.flavor-8 img,
+.flavor-9 img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+img {
+  width: 150px; 
+  height: auto; 
+}
+.container {
+  height: 100vh;
+}
+.box1 {
+  border: 2px solid black;
+  padding: 10px;
+  width: 200px;
+  height: 720px;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-35%);
+  font-weight: bold;
+  color:teal;
+  text-align: center;
+}
+
+.box1 p {
+  font-size: 40px;
+  line-height: 1.5;
+  margin: 0;
+}
+.box2 {
+  border: 2px solid black;
+  padding: 10px;
+  width: 200px;
+  height: 720px;
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-35%);
+  font-size: 24px;
+  font-weight: bold;
+  color:teal;
+ 
+}
+ 
+.box2 img {
+  width:120px;
+  height: 120px;
+  margin: 30px 30px 30px -30px;
+}
+p {
+
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 0;
+}
+.background {
+  position: relative;
+}
+
+.background img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+body {
+  background-image: url('src/assets/images/christina-rumpf-LMzwJDu6hTE-unsplash.jpg');
+  background-size: 100%;
+}
