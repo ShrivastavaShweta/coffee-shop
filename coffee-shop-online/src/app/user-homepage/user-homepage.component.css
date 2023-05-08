@@ -50,15 +50,15 @@
   padding: 11.5%;
 }
 
-.flavor-1,
-.flavor-2,
-.flavor-3,
-.flavor-4,
-.flavor-5,
-.flavor-6,
-.flavor-7,
-.flavor-8,
-.flavor-9 {
+.item-1,
+.item-2,
+.item-3,
+.item-4,
+.item-5,
+.item-6,
+.item-7,
+.item-8,
+.item-9 {
   /* border: 2px solid black; */
   padding: -10px;
   text-align: center;
@@ -66,20 +66,20 @@
   font-weight: bold;
   color:teal;
 }
-.flavortext1 {
+.itemtext1 {
   text-align: center;
   display: block;
   margin-top: 10px;
 }
-.flavor-1 img,
-.flavor-2 img,
-.flavor-3 img,
-.flavor-4 img,
-.flavor-5 img,
-.flavor-6 img,
-.flavor-7 img,
-.flavor-8 img,
-.flavor-9 img {
+.item-1 img,
+.item-2 img,
+.item-3 img,
+.item-4 img,
+.item-5 img,
+.item-6 img,
+.item-7 img,
+.item-8 img,
+.item-9 img {
   width: 110%;
 }
 .box1 {
@@ -115,19 +115,24 @@
   font-size: 24px;
   font-weight: bold;
   color:teal;
-  text-align: center;
+
  
 }
  
 .box2 img {
   width:120px;
   height: 120px;
-  margin: 10px 20px -5px -30px;
+  margin: 50px 20px -5px -5px;
 }
 p {
   font-size: 28px;
   line-height: 1.5;
   text-align: center;
+}
+.favitem1{
+  text-align: center;
+  margin: -30px;
+  font-size: 28px;
 }
 .background {
   position: relative;
