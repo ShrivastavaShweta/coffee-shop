@@ -1,37 +1,41 @@
 <body id="container">
   <header id="header"></header>
   <div class = "register-box" id="box">
-    <form>
-
+    <form (ngSubmit)="onSubmit()">
       <h3> Sign Up Now </h3>
 
-      <label for="fullName"></label><br>
-      <input type="text" id="fullName" placeholder="Enter Your Name"><br>
+      <label>
+        Full Name<br>
+        <input type="text" name="name" placeholder="Enter Your Name" [(ngModel)]="user.name"><br>
+      </label><br>
 
-      <label for="fullName"></label><br>
-      <input type="text" id="birthday" placeholder="Enter Your Birthday"><br>
+      <label>
+        Birthday<br>
+        <input type="text" name="birthday" placeholder="MMDD" [(ngModel)]="user.birthday"><br>
+      </label><br>
 
-      <label for="email"></label><br>
-      <input type="text" id="email" placeholder="Enter Your Email"><br>
+      <label>
+        Email<br>
+        <input type="text" name="email" placeholder="someone@domain.com" [(ngModel)]="user.email"><br>
+      </label><br>
 
-      <label for="typePassword"></label><br>
-      <input type="text" id="typePassword" placeholder="Enter Your Password"><br>
+      <label>
+        Password<br>
+        <input type="text" name="password" placeholder="Password" [(ngModel)]="user.password"><br>
+        <input type="text" id="confirmPw" placeholder="Confirm Password"><br>
+      </label><br>
 
-      <label for="confirmPassword"></label><br>
-      <input type="text" id="confirmPassword" placeholder="Confirm Password"><br>
-
-          <button type="submit" id="btnStyle"> Create Account </button>
+          <button id="btnStyle"> Create Account </button>
 
           <p> already have an account? </p>
 
-          <p id="loginText">Login Now!</p>
+          <a href="./user-login">
+            <p id="loginText">Login Now!</p>
+          </a>
 
         </form>
-
     </div>
 
-  <footer id="footer">
-
-  </footer>
+  <footer id="footer"></footer>
 
 </body>

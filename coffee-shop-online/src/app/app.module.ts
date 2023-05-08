@@ -22,14 +22,14 @@ import { LoginAdminService } from './login-admin.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: 'admin-login', component: AdminLoginComponent },
       { path: '', component: HomePageComponent },
       { path:'register-user', component: RegisterUserPageComponent },
       { path:'user-login', component: UserLoginPageComponent }
     ]),
-    HttpClientModule,
-    FormsModule,
   ],
   providers: [UserService, LoginAdminService],
   bootstrap: [AppComponent]

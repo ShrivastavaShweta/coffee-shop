@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
+import { Injectable } from '@angular/core'
 import { User } from '../model/user';
 import { Observable } from 'rxjs'
 
@@ -8,14 +8,12 @@ import { Observable } from 'rxjs'
 })
 export class UserService {
 
-  private usersUrl: string;
+  private usersUrl = 'http://localhost:4200';
 
-  constructor(private http: HttpClient) {
-    this.usersUrl = 'http://localhost:8080'
-  }
+  constructor(private http: HttpClient) {  }
 
   public save(user: User) {
-    return this.http.post<User>(this.usersUrl, user);
+    return this.http.post<User>(this.usersUrl+"/register-user", user);
   }
 
   public findAll(): Observable<User[]> {

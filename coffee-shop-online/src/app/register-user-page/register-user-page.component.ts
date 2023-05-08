@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from '../service/user-service.service';
 import { User } from '../model/user';
+import { UserService } from '../service/user-service.service';
 
 @Component({
   selector: 'app-register-user-page',
@@ -10,17 +9,13 @@ import { User } from '../model/user';
 })
 export class RegisterUserPageComponent implements OnInit {
 
-  user: User;
+  user: User = new User();
 
   constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private userService: UserService) {
-      this.user = new User();
-    }
+    private userService: UserService) {    }
 
   ngOnInit(): void {
-    }
+  }
 
   onSubmit() {
     this.userService.save(this.user).subscribe(data =>{
