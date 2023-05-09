@@ -9,10 +9,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:8080"})
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("")
 public class UsersController {
 
     // constructors
@@ -27,19 +29,14 @@ public class UsersController {
         return (List<User>) userRepository.findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/register-user")
-    public ResponseEntity createUser(@RequestBody User user) {
-        try {
-            if (adminRepository.count() == 0) {
-                Admin _user = adminRepository.save(user.castToAdmin());
-            } else {
-                User _user = userRepository.save(user);
-            }
-            return new ResponseEntity<>(_user, HttpStatus.CREATED);
-        } catch (Exception e) {
-            return new ResponseEntity(null, HttpStatus.INTERNAL_SERVER_ERROR)
+    public Object createUser(@Valid @RequestBody User user) {
+        if (adminRepository.count() == 0) {
+            return adminRepository.save(user.castToAdmin());
+        } else {
+            return userRepository.save(user);
         }
-
     }
 
 }
