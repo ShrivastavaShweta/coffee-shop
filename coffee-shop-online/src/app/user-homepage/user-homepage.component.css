@@ -60,7 +60,6 @@
 .item-8,
 .item-9 {
   /* border: 2px solid black; */
-  padding: -10px;
   text-align: center;
   font-size: 28px;
   font-weight: bold;
@@ -80,7 +79,12 @@
 .item-7 img,
 .item-8 img,
 .item-9 img {
-  width: 110%;
+  margin-left: -20px;
+  padding: 10px;
+  width: 1000%;
+  max-width: 180px;
+  height: 180px;
+  border-radius: 20px;
 }
 .box1 {
   border: 2px solid black;
@@ -123,6 +127,8 @@
   width:120px;
   height: 120px;
   margin: 50px 20px -5px -5px;
+  margin-left: -5px;
+  border-radius: 20px;
 }
 p {
   font-size: 28px;
