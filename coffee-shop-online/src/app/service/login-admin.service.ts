@@ -13,7 +13,7 @@ export class LoginAdminService {
   constructor(private httpClient:HttpClient) { }
 
   loginAdmin (admin : Admin): Observable<object>{
-    //console.log(admin);
+
     return this.httpClient.post(`${this.baseUrl}`, admin);
   }
 }
