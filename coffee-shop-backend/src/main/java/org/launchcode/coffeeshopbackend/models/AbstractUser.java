@@ -18,12 +18,12 @@ public abstract class AbstractUser {
     private Calendar birthday;
     @NotNull
     private String email;
-//    @OneToMany
+    //    @OneToMany
 //    @JoinColumn(name = "user_id")
 //    private ArrayList<Drink> savedDrinks = new ArrayList<>();
 //
 //    private Drink faveDrink;
-   @NotNull
+    @NotNull
     private String pwHash;
     public static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
