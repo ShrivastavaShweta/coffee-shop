@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@CrossOrigin(originPatterns = "http://localhost:4200/*")
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("")
 public class UsersController {
 
     // constructors
@@ -25,15 +24,16 @@ public class UsersController {
 
     // methods
     @GetMapping("/register-user")
-    public List<User> getUsers() {
-        return (List<User>) userRepository.findAll();
+    public Iterable<User> getUsers() {
+        return userRepository.findAll();
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(originPatterns = "http://localhost:4200/*")
     @PostMapping("/register-user")
-    public Object createUser(@Valid @RequestBody User user) {
+    public @ResponseBody User createUser(@Valid @RequestBody User user) {
         if (adminRepository.count() == 0) {
-            return adminRepository.save(user.castToAdmin());
+            adminRepository.save(user.castToAdmin());
+            return userRepository.save(user);
         } else {
             return userRepository.save(user);
         }
