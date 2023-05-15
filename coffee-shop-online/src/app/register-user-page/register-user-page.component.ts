@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../model/user';
 import { UserService } from '../service/user-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-register-user-page',
@@ -11,10 +12,16 @@ export class RegisterUserPageComponent implements OnInit {
 
   _user: User = new User();
   private _userService: UserService;
+  private http: HttpClient;
 
   constructor(
-    userService: UserService) {
+    userService: UserService, http: HttpClient) {
       this._userService = userService;
+      this.http = http;
+      http.get('token').subscribe(data => {
+        const token = data['token'];
+        http.get('http://localhost:8080', {headers : new HttpHeaders().set('X-Auth-Token', token)}).subscribe(response => this._user);
+      }, () => {});
     }
 
   ngOnInit(): void {
